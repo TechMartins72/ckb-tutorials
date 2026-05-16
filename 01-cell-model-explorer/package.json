@@ -1,0 +1,19 @@
+{
+  "name": "01-cell-model-explorer",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ckb-ccc/core": "^1.12.5",
+    "tsx": "^4.21.1",
+    "typescript": "^6.0.3"
+  }
+}
