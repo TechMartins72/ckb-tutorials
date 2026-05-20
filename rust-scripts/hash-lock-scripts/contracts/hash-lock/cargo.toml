@@ -1,0 +1,16 @@
+[package]
+name = "hash-lock"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ckb-std = { version = "1.1", features = ["dummy-atomic"] }
+ckb-hash = "1.1"
+
+[profile.release]
+overflow-checks = true
+opt-level = 2         # or "s" for size optimization
+lto = true
+codegen-units = 1
+panic = "abort"       # critical for no_std CKB scripts
+strip = true          # strips debug symbols
