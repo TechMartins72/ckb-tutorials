@@ -34,6 +34,7 @@ fn blake2b_256(data: &[u8]) -> [u8; BLAKE2B_256_HASH_LEN] {
     hash
 }
 
+
 fn main() -> i8 {
     // STEP 1: Load the currently executing script
     let script = match load_script() {
@@ -68,7 +69,6 @@ fn main() -> i8 {
     if computed_hash[..] != expected_hash[..] {
         return ERROR_HASH_MISMATCH;
     }
-
     // STEP 6: Success! Approve the transaction.
     0
 }

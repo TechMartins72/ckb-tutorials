@@ -9,8 +9,8 @@ ckb-hash = "1.1"
 
 [profile.release]
 overflow-checks = true
-opt-level = 2         # or "s" for size optimization
-lto = true
-codegen-units = 1
-panic = "abort"       # critical for no_std CKB scripts
-strip = true          # strips debug symbols
+opt-level = "s"      # optimize for size (vs "2" or "3" for speed)
+lto = true           # link-time optimization removes dead code
+codegen-units = 1    # allows more aggressive optimization
+panic = "abort"      # no unwinding support (shrinks binary, no-std safe)
+strip = true         # strip debug symbols in release builds
